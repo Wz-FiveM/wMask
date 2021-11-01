@@ -1,8 +1,6 @@
 -- Interaction Zone
 local interval = 250
 local canInteract = true
--- Get Information from player ped
-local masque = {} for i = 0, GetNumberOfPedDrawableVariations(PlayerPedId(), 1) - 1, 1 do masque[i] = i end
 
 -- Index for RageUI List
 local index = {masque = 0, sliderPanel = {min = 0, ind = 0, ind2 = 0, ind3 = 0, ind4 = 0, max = 6}}
@@ -48,6 +46,8 @@ local openMask = function()
     while main do
         Citizen.Wait(0)
         RageUI.IsVisible(main, function()
+            -- Get Information from player ped
+            local masque = {} for i = 0, GetNumberOfPedDrawableVariations(PlayerPedId(), 1) - 1, 1 do masque[i] = i end
             RageUI.Separator('Prix du Masque: ~g~'..Mask.Price.."$")
 
             RageUI.List("Masque", masque, index.masque, nil, {}, true, {
