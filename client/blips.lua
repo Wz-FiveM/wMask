@@ -6,7 +6,7 @@ Citizen.CreateThread(function()
         SetBlipColour(blip, 26)
         SetBlipAsShortRange(blip, true)
         BeginTextCommandSetBlipName("STRING")
-        AddTextComponentString("BarberShop")
+        AddTextComponentString("Magasin de Masque")
         EndTextCommandSetBlipName(blip)
     end
 end)
